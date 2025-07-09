@@ -41,7 +41,7 @@ body {
     transform: scale(1.05);
 }
 
-/* Hero Section */
+/* Hero Section fundo inicial tela elosaude */
 .hero {
     background: linear-gradient(#777777, #20A490 0%, #777777 100%);
     color: white;
@@ -244,7 +244,7 @@ body {
 }
 
 .benefit-icon {
-    background: linear-gradient(45deg, #667eea, #764ba2);
+    background: linear-gradient(45deg, #20a490, #7d7776);
     color: white;
     width: 24px;
     height: 24px;
@@ -257,9 +257,9 @@ body {
     font-weight: bold;
 }
 
-/* Call to Action */
+/* Call to Action  area do botão no fim da pagina*/
 .cta {
-    background: linear-gradient(135deg, #1e293b 0%, #334155 100%);
+    background: linear-gradient(135deg, #44484c 15%, #7d7776  100%);
     color: white;
     padding: 100px 0;
     text-align: center;
@@ -299,7 +299,8 @@ body {
 }
 
 .cta-button {
-    background: linear-gradient(45deg, #667eea, #764ba2);
+    /*background: linear-gradient(0deg, #20a490, #7d7776);*/
+	background-color: #20a490;
     color: white;
     border: none;
     padding: 18px 40px;
