@@ -5,118 +5,79 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Time de Inovação Elosaúde</title>
     <link rel="stylesheet" href="styles.css">
-    <link href="https://assets.calendly.com/assets/external/widget.css" rel="stylesheet">
-    <script src="https://assets.calendly.com/assets/external/widget.js" type="text/javascript" async></script>
 </head>
 <body>
-    <header class="header">
+    <div class="hero">
         <div class="container">
-            <img src="elosaude_semFundo.png" alt="Elosaúde Logo" class="logo-img">
-        </div>
-    </header>
-
-    <section class="hero">
-        <div class="container">
-            <div class="text-content">
+            <div>
                 <h1 class="hero-title">Time de Inovação Elosaúde</h1>
-                <h2 class="hero-subtitle">Novo Canal de Atendimento via CRM</h2>
-                <p class="hero-description">
-                    Um dos nossos principais objetivos é fomentar a cultura data-driven (tomada de decisões baseadas em dados) na instituição. Para isso, estamos expandindo a capacidade de abertura de chamados, antes restrita à TI, para todos os setores.
-                </p>
+                <p class="hero-subtitle">Novo Canal de Atendimento via CRM</p>
+                <p class="hero-description">Um dos nossos principais objetivos é fomentar a cultura data-driven (tomada de decisões baseadas em dados) na instituição. Para isso, estamos expandindo a capacidade de abertura de chamados, antes restrita à TI, para todos os setores.</p>
             </div>
             <div class="image-content">
-                <video class="hero-img" autoplay loop muted>
+                <video class="hero-video" id="hero-video" autoplay loop controls controlsList="nodownload novolume">
                     <source src="ploomes.mp4" type="video/mp4">
-                    O seu navegador não suporta a tag de vídeo.
+                    <p>Seu navegador não suporta vídeo HTML5. <a href="ploomes.mp4">Baixe o vídeo</a>.</p>
                 </video>
+                <button id="btn-mute">
+                    <svg class="icon-muted" viewBox="0 0 24 24"><path d="M3 9v6h4l5 5V4L7 9H3zm13.5 3c0-1.77-1.02-3.29-2.5-4.03v8.05c1.48-.73 2.5-2.25 2.5-4.02zM14 3.23v2.06c2.89.86 5 3.54 5 6.71s-2.11 5.85-5 6.71v2.06c4.01-.91 7-4.49 7-8.77s-2.99-7.86-7-8.77z"/></svg>
+                    <svg class="icon-unmuted" viewBox="0 0 24 24"><path d="M3 9v6h4l5 5V4L7 9H3zm13.5 3c0-1.77-1.02-3.29-2.5-4.03v8.05c1.48-.73 2.5-2.25 2.5-4.02zM14 3.23v2.06c2.89.86 5 3.54 5 6.71s-2.11 5.85-5 6.71v2.06c4.01-.91 7-4.49 7-8.77s-2.99-7.86-7-8.77zM16.5 12c0-1.33-1-2.5-2.5-2.5v5c1.5 0 2.5-1.17 2.5-2.5z"/></svg>
+                </button>
             </div>
         </div>
-    </section>
+    </div>
 
-    <section class="innovation-channel">
+    <div class="innovation-channel">
         <div class="container">
             <div class="section-content">
-                <div class="text-content">
+                <div>
                     <h2 class="section-title">Por que seu setor deve ter um Canal de Chamados?</h2>
-                    <p class="section-description">
-                        Agora, todos os setores da empresa podem contar com seu próprio canal de chamados via CRM. Uma ferramenta simples e eficiente para organizar demandas, dar visibilidade aos serviços prestados e gerar dados que ajudam a tomar melhores decisões.
-                    </p>
-                    <div class="features-grid">
-                        <div class="feature-card">
-                            <span class="feature-icon">📋</span>
-                            <h3>Organizar os chamados</h3>
-                            <p>Estruturação eficiente das solicitações</p>
-                        </div>
-                        <div class="feature-card">
-                            <span class="feature-icon">📢</span>
-                            <h3>Divulgar nossos serviços</h3>
-                            <p>Maior visibilidade das nossas capacidades</p>
-                        </div>
-                        <div class="feature-card">
-                            <span class="feature-icon">📊</span>
-                            <h3>Gerar indicadores</h3>
-                            <p>Dados que nos ajudam a otimizar processos e provar nosso valor</p>
-                        </div>
-                        <div class="feature-card">
-                            <span class="feature-icon">🧩</span>
-                            <h3>Tomada de Decisão mais Inteligente</h3>
-                            <p>Com dados organizados, seu setor ganha base para justificar decisões, solicitar recursos e priorizar o que realmente importa.</p>
-                        </div>
+                    <p class="section-description">Agora, todos os setores da empresa podem contar com seu próprio canal de chamados via CRM. Uma ferramenta simples e eficiente para organizar demandas, dar visibilidade aos serviços prestados e gerar dados que ajudam a tomar melhores decisões.</p>
+                    <div class="benefits-list">
+                        <div class="benefit-item"><span class="benefit-icon">📋</span> Organizar os chamados<br>Estruturação eficiente das solicitações</div>
+                        <div class="benefit-item"><span class="benefit-icon">📢</span> Divulgar nossos serviços<br>Maior visibilidade das nossas capacidades</div>
+                        <div class="benefit-item"><span class="benefit-icon">📊</span> Gerar indicadores<br>Dados que nos ajudam a otimizar processos e provar nosso valor</div>
+                        <div class="benefit-item"><span class="benefit-icon">🧩</span> Tomada de Decisão mais Inteligente<br>Com dados organizados, seu setor ganha base para justificar decisões, solicitar recursos e priorizar o que realmente importa.</div>
                     </div>
                 </div>
-                <div class="image-content">
-                    <video class="section-img" autoplay loop muted>
+                <video class="section-img" autoplay loop muted>
                         <source src="equipe.mp4" type="video/mp4">
                         O seu navegador não suporta a tag de vídeo.
                     </video>
-                </div>
             </div>
         </div>
-    </section>
+    </div>
 
-    <section class="collaboration">
+    <div class="collaboration">
         <div class="container">
             <div class="section-content reverse">
                 <div class="image-content">
-                    <img src="data_driven.jpg" alt="Colaboração" class="section-img">
+                     <img src="data_driven.jpg" alt="Colaboração" class="section-img">
                 </div>
-                <div class="text-content">
+                <div>
                     <h2 class="section-title">Fomentando a Cultura Data-Driven</h2>
-                    <p class="section-description">
-                        Nosso novo canal de chamados vai além de facilitar o atendimento: ele fortalece a cultura data-driven, dando visibilidade aos dados, promovendo decisões mais inteligentes e otimizando o uso de recursos em toda a instituição.
-                    </p>
+                    <p class="section-description">Nosso novo canal de chamados vai além de facilitar o atendimento: ele fortalece a cultura data-driven, dando visibilidade aos dados, promovendo decisões mais inteligentes e otimizando o uso de recursos em toda a instituição.</p>
                     <div class="benefits-list">
-                        <div class="benefit-item">
-                            <span class="benefit-icon">✓</span>
-                            Decisões mais inteligentes
-                        </div>
-                        <div class="benefit-item">
-                            <span class="benefit-icon">✓</span>
-                            Melhor alocação de recursos
-                        </div>
-                        <div class="benefit-item">
-                            <span class="benefit-icon">✓</span>
-                            Maior transparência
-                        </div>
+                        <div class="benefit-item"><span class="benefit-icon">✓</span> Decisões mais inteligentes</div>
+                        <div class="benefit-item"><span class="benefit-icon">✓</span> Melhor alocação de recursos</div>
+                        <div class="benefit-item"><span class="benefit-icon">✓</span> Maior transparência</div>
                     </div>
                 </div>
             </div>
         </div>
-    </section>
+    </div>
 
-    <section class="cta">
+    <div class="cta">
         <div class="container">
             <div class="cta-content">
                 <h2 class="cta-title">Lembre-se: a colaboração de cada um é fundamental para nosso sucesso!</h2>
-                <p class="cta-description">
-                    Gostou? Traga pra gente a sua necessidade e vamos juntos desenvolver soluções eficientes!
-                </p>
+                <p class="cta-description">Gostou? Traga pra gente a sua necessidade e vamos juntos desenvolver soluções eficientes!</p>
                 <button class="cta-button" id="scheduleButton">Agendar horário</button>
             </div>
         </div>
-    </section>
+    </div>
 
-    <footer class="footer">
+    <div class="footer">
         <div class="container">
             <div class="footer-content">
                 <img src="elosaude_semFundo.png" alt="Elosaúde Logo" class="footer-logo-img">
@@ -124,11 +85,8 @@
 				<img src="ANS.png" alt="ANS Logo" class="logo-img">
             </div>
         </div>
-    </footer>
+    </div>
 
     <script src="script.js"></script>
 </body>
 </html>
-
-
-            

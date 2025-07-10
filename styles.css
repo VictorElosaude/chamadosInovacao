@@ -61,12 +61,12 @@ body {
     right: 0;
     bottom: 0;
     background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><defs><pattern id="grain" width="100" height="100" patternUnits="userSpaceOnUse"><circle cx="50" cy="50" r="1" fill="rgba(255,255,255,0.1)"/></pattern></defs><rect width="100" height="100" fill="url(%23grain)"/></svg>');
-    opacity: 0.3;
+    opacity: 0.1; /* Reduzido para menos escurecimento */
 }
 
 .hero .container {
     display: grid;
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: 1fr 2fr;
     gap: 60px;
     align-items: center;
     position: relative;
@@ -78,11 +78,28 @@ body {
     font-weight: 700;
     margin-bottom: 1rem;
     line-height: 1.2;
-    background: linear-gradient(45deg, #fff, #e0e7ff);
+    background: linear-gradient(
+        90deg,
+        #ffffff 0%,
+        #ffffff 30%,
+        #e8e8e8 38%,
+        #b8b8b8 42%,
+        #ffffff 46%,
+        #f0f0f0 50%,
+        #ffffff 54%,
+        #b8b8b8 58%,
+        #e8e8e8 62%,
+        #ffffff 70%,
+        #ffffff 100%
+    );
+    background-size: 200% 100%;
+    background-position: 0 0;
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     background-clip: text;
-    animation: fadeInUp 1s ease-out;
+    animation: fadeInUp 1s ease-out, silverTextShine 6s linear;
+    animation-delay: 1s, 2s;
+    position: relative;
 }
 
 .hero-subtitle {
@@ -100,25 +117,41 @@ body {
     animation: fadeInUp 1s ease-out 0.4s both;
 }
 
-.hero-img {
+.hero-video {
     width: 100%;
     height: auto;
+    min-height: 400px;
     border-radius: 20px;
-    box-shadow: none; /* Removendo sombra que pode causar "quadro" */
+    box-shadow: none;
     animation: fadeInRight 1s ease-out 0.6s both;
     transition: transform 0.3s ease;
     max-width: 100%;
+    background-color: transparent; /* Removido fundo preto para depender do vídeo */
+    filter: brightness(1.7); /* Aumenta o brilho para compensar o escurecimento */
 }
 
-.hero-img:hover {
-    transform: translateY(-10px) scale(1.02);
+.hero-video:hover {
+    transform: translateY(-10px) scale(1.02); /* Mantido, mas vamos verificar interação */
+    filter: brightness(1.6); /* Aumenta brilho no hover para evitar escurecimento */
+}
+
+#hero-video::-webkit-media-controls {
+    background-color: rgba(0, 0, 0, 0.5); /* Reduzido para menos opacidade */
+    border-radius: 0 0 20px 20px;
+    padding: 5px;
+    display: flex !important;
+}
+
+#hero-video::-webkit-media-controls-panel {
+    background-color: rgba(0, 0, 0, 0.5); /* Reduzido para menos opacidade */
+    border-radius: 0 0 20px 20px;
 }
 
 .image-content {
     position: relative;
     min-width: 0;
-    min-height: 0;
-    overflow: hidden; /* Garante que o conteúdo interno não crie quadros indesejados */
+    min-height: 400px;
+    overflow: visible;
     cursor: nwse-resize;
 }
 
@@ -257,9 +290,9 @@ body {
     font-weight: bold;
 }
 
-/* Call to Action  area do botão no fim da pagina*/
+/* Call to Action  area do botão no fim da pagina 7d7776*/
 .cta {
-    background: linear-gradient(135deg, #44484c 15%, #7d7776  100%);
+    background: linear-gradient(375deg, #323232 15%, #202020 100%);
     color: white;
     padding: 100px 0;
     text-align: center;
@@ -299,8 +332,7 @@ body {
 }
 
 .cta-button {
-    /*background: linear-gradient(0deg, #20a490, #7d7776);*/
-	background-color: #20a490;
+    background-color: #20a490;
     color: white;
     border: none;
     padding: 18px 40px;
@@ -389,6 +421,15 @@ body {
     }
 }
 
+@keyframes silverTextShine {
+    0% {
+        background-position: 0 0;
+    }
+    100% {
+        background-position: 200% 0;
+    }
+}
+
 /* Scroll Animations */
 .section-content {
     opacity: 0;
@@ -474,4 +515,46 @@ body {
         padding: 15px 30px;
         font-size: 1rem;
     }
+}
+/* --- CÓDIGO DO BOTÃO DE CONTROLE DE SOM --- */
+
+/* Ajusta o container do vídeo para permitir o posicionamento do botão */
+.image-content {
+    position: relative;
+    overflow: visible;
+}
+
+/* Estilo do botão */
+#btn-mute {
+    position: absolute;
+    bottom: 60px;
+    right: 15px;
+    width: 40px;
+    height: 40px;
+    background-color: rgba(0, 0, 0, 0.5);
+    border: none;
+    border-radius: 50%;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0;
+    transition: background-color 0.2s;
+    z-index: 11;
+}
+
+#btn-mute:hover {
+    background-color: rgba(0, 0, 0, 0.8);
+}
+
+/* Estilo para os ícones SVG dentro do botão */
+#btn-mute svg {
+    width: 24px;
+    height: 24px;
+    fill: white;
+}
+
+/* Esconde o ícone de 'som ligado' por padrão */
+.icon-unmuted {
+    display: none;
 }
